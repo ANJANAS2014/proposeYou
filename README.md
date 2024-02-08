@@ -1,2 +1,2 @@
 # proposeYou
-I wanna build a questionaire website for my boyfriend for valentines day
+I wanna build a questionnaire website for my boyfriend for Valentine's day. Just a fun project!
