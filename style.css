@@ -1,0 +1,140 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: 'Papyrus', fantasy; /* Change the font here */
+}
+
+.content h1 {
+    font-size: 2.2em;
+}
+
+.content p {
+    font-size: 1em;
+}
+
+
+.container:before {
+    content: "";
+    background-image: url('landingBackground.jpeg'); /* Replace 'your-image-url.jpg' with the URL of your desired background image */
+    background-repeat: repeat-x; /* Repeat the image horizontally */
+    background-size: auto 100%; /* Auto width and full height */
+    position: absolute;
+    top: 0;
+    left: -100%; /* Initial position is shifted left by 100% of the container width */
+    width: 200%; /* Double the container width to ensure continuous scrolling */
+    height: 100%;
+    z-index: -1;
+    animation: animatedBackground 20s linear infinite; /* Adjust animation duration and timing function as needed */
+}
+
+@keyframes animatedBackground {
+    0% {
+        background-position: 0 0; /* Initial position */
+    }
+    100% {
+        background-position: 100% 0; /* Final position */
+    }
+}
+
+.dive-in-btn {
+    margin-top: 20px; /* Adjust margin-top as needed */
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #2d11df;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dive-in-btn:hover {
+    background-color: #190982;
+}
+
+/* Add this to your existing CSS */
+#ok-button {
+    display: none;
+}
+
+#ok-button.dive-in-btn {
+    margin-top: 20px; /* Adjust margin to create space between text and button */
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#ok-button.dive-in-btn:hover {
+    background-color: #d81b60;
+}
+
+/* Add this to your existing CSS or replace with your custom styles */
+.question {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cool-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cool-button:hover {
+    background-color: #ddd;
+}
+
+#yes-button {
+    background-color: #28a745;
+    color: white;
+}
+
+#no-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.float-button {
+    animation: floatButton 2s ease-in-out infinite;
+}
+
+@keyframes floatButton {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
